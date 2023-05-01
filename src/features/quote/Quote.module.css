@@ -1,0 +1,76 @@
+:root {
+    --body-bg-color: #fecea8;
+    --card-bg-color: whitesmoke;
+    --text-color: #566777;
+    --hover-color: #eeb180;
+}
+
+.card {
+    background-color: var(--card-bg-color);
+
+    display: grid;
+
+    padding: 2em 2em;
+    width: 400px;
+    /* margin: 0; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* max-width: 30em; */
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 0.5em;
+    border: 2px solid white;
+}
+
+.text {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+    grid-column: 1/3;
+}
+
+.author {
+    color: var(--text-color);
+    margin-bottom: 1em;
+    grid-row: 2;
+}
+
+.button {
+    width: max-content;
+    color: var(--card-bg-color);
+    padding: .5em;
+    font-size: 1.2rem;
+    /* background-color: #566777; */
+    border: none;
+    border-radius: .5em;
+    background-color: var(--body-bg-color);
+    grid-row: 3;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: var(--hover-color);
+}
+
+.tweet {
+    background-color: var(--card-bg-color);
+    width: max-content;
+    font-size: 1rem;
+    grid-row: 3;
+    align-self: center;
+    justify-self: right;
+}
+
+.tweet i {
+    color: var(--card-bg-color);
+    font-size: 1.8em;
+    padding: .2em;
+    border-radius: .3em;
+    background-color: var(--body-bg-color);
+}
+
+i:hover {
+    cursor: pointer;
+    background-color: var(--hover-color);
+}
