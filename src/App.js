@@ -1,6 +1,5 @@
 import React from 'react';
 import { Quote } from './features/quote/Quote';
-import './App.css';
 
 function App() {
   return (
