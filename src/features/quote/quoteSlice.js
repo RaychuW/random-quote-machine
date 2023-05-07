@@ -15,8 +15,9 @@ const initialState = {
 export const callFetchQuote = createAsyncThunk(
   'quote/fetchQuote',
   async () => {
-    const response = await fetchQuote();
-    return await response.json();
+    let response = await fetchQuote();
+    response = await response.json();
+    return response[Math.floor(Math.random() * 1644)];
   }
 );
 
@@ -32,7 +33,7 @@ export const quoteSlice = createSlice({
       })
       .addCase(callFetchQuote.fulfilled, (state, action) => {
         state.status = 'idle';
-        state.text = action.payload.content;
+        state.text = action.payload.text;
         state.author = action.payload.author;
       });
   },
